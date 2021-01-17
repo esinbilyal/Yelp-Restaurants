@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Restaurant</h1>
+        <div class="col-6 offset-3">
+            <div class="card shadow mb-3">
+                <div class="card-body">
+                    <form action="/restaurants" method="POST" novalidate class="validated-form"
+                        enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" name="restaurant[name]" id="name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" name="restaurant[location]" id="location" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image URL</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+                    <input type="text" class="form-control" placeholder="Image URL" aria-describedby="image"
+                        name="restaurant[image]" id="image" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div> -->
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Restaurant Price</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="price-label">$</span>
+                                <input type="text" class="form-control" id="price" name="restaurant[price]"
+                                    placeholder="$$$" aria-describedby="price-label" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="description">Description</label>
+                            <textarea class="form-control" type="text" name="restaurant[description]" id="description"
+                                required></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="restaurant[image]" class="form-label">Upload image(s)</label>
+                            <input class="form-control" type="file" name="restaurant[image]" id="image" multiple>
+                        </div>
+                        <div class="mb-3 d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-success">Add New Restaurant</button>
+                        </div>
+                    </form>
+                    <a class="btn btn-light mb-3 d-grid gap-2 col-6 mx-auto" href="/restaurants">Back to All Restaurants</a>
+                </div>
+            </div>
+        </div>
+    </div>
